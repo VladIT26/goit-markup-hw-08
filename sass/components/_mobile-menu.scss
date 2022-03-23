@@ -1,0 +1,23 @@
+.mobile-menu {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+    padding: 48px 40px;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
