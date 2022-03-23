@@ -1,0 +1,28 @@
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+.socials__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: rgba(33, 150, 243, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+  }
+}
+.socials__icon {
+  fill: currentColor;
+}
