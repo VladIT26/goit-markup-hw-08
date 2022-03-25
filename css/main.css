@@ -82,20 +82,17 @@ button {
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__container {
-    display: flex;
-    align-items: center;
+    height: 80px;
   }
 }
 
@@ -108,58 +105,27 @@ button {
   letter-spacing: 0.03em;
 }
 
-.header__button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .header__button {
-    display: none;
-  }
-}
-
-.header__button .icon-cross {
-  display: none;
-}
-
-.header__button.is-open .icon-cross {
-  display: block;
-}
-
-.header__button.is-open .icon-menu {
-  display: none;
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .site-nav__link {
   display: block;
-  font-size: 40px;
-  line-height: calc(47 / 40);
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .site-nav__link {
-    display: block;
-    position: relative;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    text-decoration: none;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .site-nav__link:hover, .site-nav__link:focus {
-    color: var(--accent-color);
-  }
+.site-nav__link:hover, .site-nav__link:focus {
+  color: var(--accent-color);
 }
 
 .site-nav__link--current {
@@ -177,17 +143,21 @@ button {
   border-radius: 2px;
 }
 
+.site-nav {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
-    align-items: center;
+    margin-left: 88px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .site-nav {
     display: flex;
-    margin-left: 92px;
+    margin-left: 93px;
   }
 }
 
@@ -195,26 +165,68 @@ button {
   margin-right: 50px;
 }
 
+.auth-nav {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .auth-nav {
     margin-left: 84px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.auth-nav__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-decoration: none;
-  color: var(--secondary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
-.auth-nav__link:hover, .auth-nav__link:focus {
-  color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .auth-nav__item:not(:last-child):not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .auth-nav__link:hover, .auth-nav__link:focus {
+    color: var(--accent-color);
+  }
 }
 
 .auth-nav__icon {
@@ -222,10 +234,144 @@ button {
   fill: currentColor;
 }
 
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    z-index: 1;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 48px;
+    padding-left: 40px;
+    padding-bottom: 48px;
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+  }
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+  .mobile-menu .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .messenger-nav {
+  .mobile-menu {
     display: none;
   }
+}
+
+.menu-btn {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.menu-btn .menu-btn__icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .menu-btn__icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .menu-btn__icon-menu {
+  display: none;
+}
+
+.menu-btn .menu-btn__icon-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-btn .menu-btn__icon-close:hover,
+.menu-btn .menu-btn__icon-close :focus {
+  fill: var(--accent-color);
+}
+
+.mobile-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-nav__link--current {
+  color: var(--accent-color);
+}
+
+.mobile-contacts__item {
+  margin-bottom: 64px;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__link {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-weight: 500px;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-contacts__link:hover, .mobile-contacts__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-contacts__link:active {
+  color: var(--accent-color);
+}
+
+.mobile-socials {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mobile-socials__item:not(:last-child)::after {
+  content: "";
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-socials__link {
+  text-decoration: none;
+  color: var(--accent-color);
 }
 
 .logo__part {
@@ -236,29 +382,6 @@ button {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--accent-color);
-}
-
-@media screen and (max-width: 767px) {
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    transform: translateX(100%);
-    transition: transform 250ms linear;
-    padding: 48px 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .section {
@@ -756,8 +879,14 @@ button {
 }
 
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-logo {
@@ -773,12 +902,26 @@ button {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1199px), (min-width: 768px) {
+  .footer__tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .contacts {
   flex-grow: 1;
+  margin-bottom: 60px;
 }
 
 .join {
-  margin-left: 70px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+  }
 }
 
 .address {
@@ -861,8 +1004,14 @@ button {
 }
 
 .email {
-  margin-left: 93px;
-  width: 570px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .email {
+    margin-left: 93px;
+    width: 570px;
+  }
 }
 
 .email__title {
@@ -876,6 +1025,7 @@ button {
 }
 
 .email__input {
+  margin-bottom: 20px;
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
