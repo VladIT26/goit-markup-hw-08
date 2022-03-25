@@ -17,11 +17,18 @@
 
 <body>
     <!--Шапка-->
-<header class="header">
+<header class="header block">
     <div class="container header__container">
     <a class="logo" href="index.html"><span class="logo__part">Web</span>Studio</a>
-    <button type="button" class="header__button">OPEN</button>
-    <div class="mobile-menu ">
+    
+    <button type="button" class="header__button is-open" 
+    aria-expanded="false" data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+            <use class="icon-menu"  href="./images/icons.svg#icon-menu"></use>
+        </svg>
+        </button>
+    <div class="mobile-menu" data-menu>
     <nav class="header-nav">
     
     <ul class="site-nav">
@@ -29,7 +36,7 @@
         <li class="site-nav__item"><a href="portfolio.html" class="site-nav__link">Портфолио</a></li>
         <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
     </ul>
-    </nav>
+    
     <div>
     <ul class="auth-nav">
         <li class="auth-nav__item">
@@ -114,7 +121,23 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="team">
         <li class="team__item">
-            <img class="team__img" src="images/photo-1.jpg" alt="сотрудник 1" width="270">
+            <picture>
+                <source
+                srcset="./images/portrait/port-desk-1-1x.jpg 1x,
+                ./images/portrait/port-desk-1-2x.jpg 2x
+                "
+                media="(min-width: 1200px)"
+                />
+                <source srcset="./images/portrait/port-tabl-1-1x.jpg 1x,
+                                ./images/portrait/port-tabl-1-2x.jpg 2x
+                                " media="(min-width: 768px)" />
+                <source srcset="./images/portrait/port-mob-1x.jpg 1x,
+                                ./images/portrait/port-mob-2x.jpg 2x
+                                " media="(min-width: 320px)" />
+                            
+            </picture>
+            <!-- <img class="team__img" src="./images/portrait/port-mob-1x.jpg" alt="сотрудник 1"> -->
+            
             <div class="team__block">
             <h3 class="team__title">Игорь Демьяненко</h3>
             <p class="team__description"> Product Designer</p>
@@ -130,8 +153,21 @@
             </ul>
             </div>
         </li >
+
         <li class="team__item">
-            <img class="team__img" src="images/photo-2.jpg" alt="сотрудник 2" width="270">
+            <picture>
+                <source srcset="./images/portrait/port-desk-2-1x.jpg 1x,
+                            ./images/portrait/port-desk-2-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <source srcset="./images/portrait/port-tabl-2-1x.jpg 1x,
+                                            ./images/portrait/port-tabl-2-2x.jpg 2x
+                                            " media="(min-width: 768px)" />
+                <source srcset="./images/portrait/port-mob-2-1x.jpg 1x,
+                                            ./images/portrait/port-mob-2-2x.jpg 2x
+                                            " media="(min-width: 320px)" />
+            
+            </picture>
+            <img class="team__img" src="images/portrait/port-mob-2-1x.jpg" alt="сотрудник 2">
             <div class="team__block">
             <h3 class="team__title">Ольга Репина</h3>
             <p class="team__description">Frontend Developer</p>
@@ -242,7 +278,7 @@
         </section>
     </main>
     <!--Футер-->
-<footer class="footer">
+<footer class="footer block">
     <div class="container footer-container">
     <div class="contacts">
     <a class="footer-logo" href="index.html"><span class="logo__part">Web</span>Studio</a>
@@ -340,5 +376,6 @@
 </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
