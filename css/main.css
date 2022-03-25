@@ -436,6 +436,12 @@ button {
   padding-top: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .section__work {
+    display: none;
+  }
+}
+
 .work {
   display: flex;
 }

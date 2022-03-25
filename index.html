@@ -98,17 +98,35 @@
     </section>
 
     <!--Секция 3-->
-    <section class="section section__work">
+    <section class="section section__work block">
         <div class="container">
         <h2 class="section__title">Чем мы занимаемся</h2>
         <ul class="work">
-        <li class="work__item"><img src="images/img-1.jpg" alt="программирование" width="370">
+        <li class="work__item">
+        <picture>
+                <source srcset="./images/work/work-1-1x.jpg 1x,
+                           ./images/work/work-1-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <img class="team__img" src="./images/work/work-1-1x.jpg" alt="программирование">
+        </picture> 
         <p class="work__text">Десктопные приложения</p>
         </li>
-        <li class="work__item"><img src="images/img-2.jpg" alt="дизайн и разработка приложений" width="370">
+        <li class="work__item">
+            <picture>
+            <source srcset="./images/work/work-2-1x.jpg 1x,
+                            ./images/work/work-2-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+            <img class="team__img" src="./images/work/work-2-1x.jpg" alt="дизайн и разработка приложений">
+            </picture>
         <p class="work__text">Мобильные приложения</p>
         </li>
-        <li class="work__item"><img src="images/img-3.jpg" alt="веб дизайн" width="370">
+        <li class="work__item">
+            <picture>
+                <source srcset="./images/work/work-3-1x.jpg 1x,
+                            ./images/work/work-3-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <img class="team__img" src="./images/work/work-3-1x.jpg" alt="веб-дизайн">
+            </picture>
         <p class="work__text">Дизайнерские решения</p>
         </li>
         </ul>
@@ -134,9 +152,9 @@
                 <source srcset="./images/portrait/port-mob-1x.jpg 1x,
                                 ./images/portrait/port-mob-2x.jpg 2x
                                 " media="(min-width: 320px)" />
-                            
+             <img class="team__img" src="./images/portrait/port-mob-1x.jpg" alt="сотрудник 1">                
             </picture>
-            <!-- <img class="team__img" src="./images/portrait/port-mob-1x.jpg" alt="сотрудник 1"> -->
+           
             
             <div class="team__block">
             <h3 class="team__title">Игорь Демьяненко</h3>
@@ -165,9 +183,9 @@
                 <source srcset="./images/portrait/port-mob-2-1x.jpg 1x,
                                             ./images/portrait/port-mob-2-2x.jpg 2x
                                             " media="(min-width: 320px)" />
-            
-            </picture>
             <img class="team__img" src="images/portrait/port-mob-2-1x.jpg" alt="сотрудник 2">
+            </picture>
+            
             <div class="team__block">
             <h3 class="team__title">Ольга Репина</h3>
             <p class="team__description">Frontend Developer</p>
@@ -192,7 +210,20 @@
             </div>
         </li> 
         <li class="team__item">
-            <img class="team__img" src="images/photo-3.jpg" alt="сотрудник 3" width="270">
+            <picture>
+                <source srcset="./images/portrait/port-desk-3-1x.jpg 1x,
+                            ./images/portrait/port-desk-3-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <source srcset="./images/portrait/port-tabl-3-1x.jpg 1x,
+                                            ./images/portrait/port-tabl-3-2x.jpg 2x
+                                            " media="(min-width: 768px)" />
+                <source srcset="./images/portrait/port-mob-3-1x.jpg 1x,
+                                            ./images/portrait/port-mob-3-2x.jpg 2x
+                                            " media="(min-width: 320px)" />
+            <img class="team__img" src="/images/portrait/port-mob-3-1x.jpg" alt="сотрудник 3">
+            </picture>
+
+            
             <div class="team__block">
             <h3 class="team__title">Николай Тарасов</h3>
             <p class="team__description">Marketing</p>
@@ -217,7 +248,19 @@
             </div>
         </li>
         <li class="team__item">
-            <img class="team__img" src="images/photo-4.jpg" alt="сотрудник 4" width="270">
+            <picture>
+                <source srcset="./images/portrait/port-desk-4-1x.jpg 1x,
+                            ./images/portrait/port-desk-4-2x.jpg 2x
+                            " media="(min-width: 1200px)" />
+                <source srcset="./images/portrait/port-tabl-4-1x.jpg 1x,
+                                            ./images/portrait/port-tabl-4-2x.jpg 2x
+                                            " media="(min-width: 768px)" />
+                <source srcset="./images/portrait/port-mob-4-1x.jpg 1x,
+                                            ./images/portrait/port-mob-4-2x.jpg 2x
+                                            " media="(min-width: 320px)" />
+             <img class="team__img" src="/images/portrait/port-mob-4-1x.jpg" alt="сотрудник 4">
+            </picture>
+           
             <div class="team__block">
             <h3 class="team__title">Михаил Ермаков</h3>
             <p class="team__description">UI Designer</p>
