@@ -431,7 +431,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero-768-2x.jpg);
   }
@@ -470,10 +470,6 @@ button {
     font-size: 44px;
     line-height: 1.36;
   }
-}
-
-.cckkc {
-  color: tomato;
 }
 
 .hero__button {
