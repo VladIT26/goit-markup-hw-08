@@ -14,6 +14,18 @@
   letter-spacing: 0.06em;
   color: var(--secondary-bgc);
   border: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .email-button__icon {
   margin-left: 10px;
