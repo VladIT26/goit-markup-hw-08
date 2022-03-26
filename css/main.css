@@ -275,11 +275,11 @@ button {
   }
 }
 
-.menu-btn .menu-btn__icon-close {
+.menu-btn .menu-btn__icon-close-mob {
   display: none;
 }
 
-.menu-btn.is-open .menu-btn__icon-close {
+.menu-btn.is-open .menu-btn__icon-close-mob {
   display: block;
 }
 
@@ -287,14 +287,26 @@ button {
   display: none;
 }
 
-.menu-btn .menu-btn__icon-close {
+.menu-btn .menu-btn__icon-menu {
+  width: 24px;
+  height: 16px;
+}
+
+.menu-btn .menu-btn__icon-menu:hover,
+.menu-btn .menu-btn__icon-menu :focus {
+  fill: var(--accent-color);
+}
+
+.menu-btn .menu-btn__icon-close-mob {
+  width: 19px;
+  height: 19px;
   position: absolute;
   top: 10px;
   right: 15px;
 }
 
-.menu-btn .menu-btn__icon-close:hover,
-.menu-btn .menu-btn__icon-close :focus {
+.menu-btn .menu-btn__icon-close-mob:hover,
+.menu-btn .menu-btn__icon-close-mob :focus {
   fill: var(--accent-color);
 }
 
