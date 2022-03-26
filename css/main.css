@@ -1043,8 +1043,9 @@ button {
 }
 
 .email__input {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1052,6 +1053,24 @@ button {
   background-color: #2f303a;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 767px) {
+  .email__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .email__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email__input {
+    width: 358px;
+  }
 }
 
 .email-button {
