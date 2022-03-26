@@ -472,6 +472,10 @@ button {
   }
 }
 
+.cckkc {
+  color: tomato;
+}
+
 .hero__button {
   color: var(--primary-white-color);
   background-color: #2196f3;
