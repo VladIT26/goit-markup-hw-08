@@ -29,25 +29,33 @@
   margin-bottom: 20px;
 }
 .footer__tablet {
+  margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
     margin-bottom: 60px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .join {
-  margin-bottom: 60px;
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
+    text-align: left;
   }
 }
 
 .address {
   display: block;
 }
-.address__list {
+.contacts {
   @media (max-width: 767px) {
     margin-bottom: 60px;
+  }
+  @media (min-width: 768px) {
+    text-align: left;
   }
 }
 .address__item:not(:last-child) {

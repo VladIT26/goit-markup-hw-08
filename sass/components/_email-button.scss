@@ -16,15 +16,13 @@
   border: transparent;
 
   @media screen and (min-width: 768px) {
-    display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media screen and (min-width: 1200px) {
+    margin-left: 8px;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 .email-button__icon {

@@ -4,14 +4,16 @@
   margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
 .filter__buttons {
-  margin-bottom: 15px;
   padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
@@ -36,6 +38,16 @@
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item {
+  margin-bottom: 15px;
+
+  &:nth-child(n + 4) {
+    margin-bottom: 0;
+  }
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }

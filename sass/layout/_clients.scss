@@ -19,7 +19,7 @@
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -37,7 +37,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
