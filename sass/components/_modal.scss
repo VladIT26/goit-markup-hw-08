@@ -23,7 +23,15 @@
 .backdrop.is-hidden .modal {
   transform: scale(0.6) translate(-50%, -50%);
 }
-
+.button-position {
+  @media screen and (max-width: 767px) {
+    position: relative;
+    max-width: 450px;
+    height: 609px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .modal {
   margin-left: auto;
   margin-right: auto;
@@ -57,18 +65,8 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   border: transparent;
-
-  // @media screen and (max-width: 767px) {
-  //   top: 101px;
-  //   right: 33px;
-  // }
-
-  @media screen and (max-width: 767px) {
-    padding-top: 8px;
-    padding-left: 412px;
-    position: static;
-  }
 }
+
 .modal__icon-close {
   display: flex;
   justify-content: center;

@@ -1178,6 +1178,16 @@ button {
   transform: scale(0.6) translate(-50%, -50%);
 }
 
+@media screen and (max-width: 767px) {
+  .button-position {
+    position: relative;
+    max-width: 450px;
+    height: 609px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .modal {
   margin-left: auto;
   margin-right: auto;
@@ -1215,14 +1225,6 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   border: transparent;
-}
-
-@media screen and (max-width: 767px) {
-  .modal-button {
-    padding-top: 8px;
-    padding-left: 412px;
-    position: static;
-  }
 }
 
 .modal__icon-close {
